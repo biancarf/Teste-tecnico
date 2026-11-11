@@ -1,0 +1,22 @@
+{
+  "name": "desbravador-qa-challenge",
+  "version": "1.0.0",
+  "description": "Desafio QA Desbravador — cenários BDD (Gherkin pt-BR) + automação Playwright",
+  "scripts": {
+    "bddgen": "bddgen",
+    "test": "bddgen && playwright test",
+    "test:smoke": "bddgen && playwright test --grep @smoke --project=chromium",
+    "test:headed": "bddgen && playwright test --headed --project=chromium --workers=1",
+    "report": "playwright show-report",
+    "typecheck": "tsc"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "playwright-bdd": "^9.2.1",
+    "typescript": "^7.0.2"
+  },
+  "private": true
+}
